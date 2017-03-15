@@ -1,11 +1,11 @@
 {
   "name": "starwars-names",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Get random Star Wars names",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha src/index.test.js -w",
-    "test:single": "mocha src/index.test.js"
+    "test": "mocha test/index.test.js -w",
+    "test:single": "istanbul cover -x *.test.js ./node_modules/mocha/bin/_mocha -- -R spec"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "chai": "3.5.0",
-    "mocha": "3.2.0"
+    "istanbul": "0.4.5",
+    "mocha": "3.0.1"
   }
 }
